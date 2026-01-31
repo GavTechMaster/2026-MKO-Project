@@ -185,5 +185,8 @@ compile_commands.json
 
 # Eclipse generated file for annotation processors
 .factorypath
+<<<<<<< HEAD
 
 BuildConstants.java
+=======
+>>>>>>> 5efbc34 (Setted up the Subsystems for Vision, Game Piece Manipulator, Arm, and Drivetrain.)

@@ -16,6 +16,10 @@ import org.littletonrobotics.junction.wpilog.WPILOGReader;
 import org.littletonrobotics.junction.wpilog.WPILOGWriter;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
+<<<<<<< HEAD
+=======
+import frc.robot.subsystems.Vision;
+>>>>>>> 5efbc34 (Setted up the Subsystems for Vision, Game Piece Manipulator, Arm, and Drivetrain.)
 
 /**
  * Runs tasks on Roborio in this file.
@@ -36,6 +40,11 @@ public class Robot extends LoggedRobot {
         kReplay;
     }
 
+<<<<<<< HEAD
+=======
+    public static Boolean teleopMode = false;
+    public Vision robotVision = new Vision();
+>>>>>>> 5efbc34 (Setted up the Subsystems for Vision, Game Piece Manipulator, Arm, and Drivetrain.)
     public RobotRunType robotRunType = RobotRunType.kReal;
 
     // private Ultrasonic ultrasonic = new Ultrasonic();
@@ -129,9 +138,18 @@ public class Robot extends LoggedRobot {
      */
     @Override
     public void autonomousInit() {
+<<<<<<< HEAD
         robotContainer.getAutonomousCommand().schedule();
         autoChooser = robotContainer.getAutonomousCommand();
 
+=======
+        robotVision.visionCamera.setDriverMode(false);
+        robotContainer.getAutonomousCommand().schedule();
+        autoChooser = robotContainer.getAutonomousCommand();
+
+        teleopMode = false;
+
+>>>>>>> 5efbc34 (Setted up the Subsystems for Vision, Game Piece Manipulator, Arm, and Drivetrain.)
         // schedule the autonomous command (example)
         if (autoChooser != null) {
             autoChooser.schedule();
@@ -140,6 +158,7 @@ public class Robot extends LoggedRobot {
 
     /** This function is called periodically during autonomous. */
     @Override
+<<<<<<< HEAD
     public void autonomousPeriodic() {}
 
     @Override
@@ -147,6 +166,19 @@ public class Robot extends LoggedRobot {
         if (autoChooser != null) {
             autoChooser.cancel();
         }
+=======
+    public void autonomousPeriodic() {
+        
+    }
+
+    @Override
+    public void teleopInit() {
+        robotVision.visionCamera.setDriverMode(true);
+        if (autoChooser != null) {
+            autoChooser.cancel();
+        }
+        teleopMode = true;
+>>>>>>> 5efbc34 (Setted up the Subsystems for Vision, Game Piece Manipulator, Arm, and Drivetrain.)
     }
 
     /** This function is called periodically during operator control. */

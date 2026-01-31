@@ -1,6 +1,10 @@
 {
     "enableCppIntellisense": false,
     "currentLanguage": "java",
+<<<<<<< HEAD
     "projectYear": "2025",
+=======
+    "projectYear": "2026",
+>>>>>>> 5efbc34 (Setted up the Subsystems for Vision, Game Piece Manipulator, Arm, and Drivetrain.)
     "teamNumber": 5572
 }

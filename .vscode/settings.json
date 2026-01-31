@@ -57,6 +57,7 @@
     "edu.wpi.first.math.**.proto.*",
     "edu.wpi.first.math.**.struct.*",
   ],
+<<<<<<< HEAD
   "java.format.settings.url": "formatter.xml",
   "java.format.settings.profile": "GoogleStyle",
   "[java]": {
@@ -68,4 +69,7 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "terminal.integrated.defaultProfile.windows": "Git Bash"
+=======
+  "java.dependency.enableDependencyCheckup": false
+>>>>>>> 5efbc34 (Setted up the Subsystems for Vision, Game Piece Manipulator, Arm, and Drivetrain.)
 }
